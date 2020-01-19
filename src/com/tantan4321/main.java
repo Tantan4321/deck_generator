@@ -19,11 +19,12 @@ public class main {
         if (directoryListing != null) {
             for (File child : directoryListing) {
                 String this_name = child.getName().replace("_", " ").replace(".jpg", "");
-                this_name = toTitleCase(this_name); //TODO: implement better way of generating names
-                String path = "/assets/img/" + child.getName();
+                this_name = toTitleCase(this_name);
+                String path = "assets/img/" + child.getName();
                 JSONObject jo = new JSONObject();
                 jo.put("name", this_name);
                 jo.put("img", path);
+                jo.put("description", "");
                 store.put(jo);
             }
         } else {
@@ -32,13 +33,14 @@ public class main {
 
         ret.put("famous_people", store); //add array of people objects to container json
 
-        try (FileWriter file = new FileWriter("data.json")) {
+        try (FileWriter file = new FileWriter("C:\\Data\\App-dev\\flutter_whoiswho\\assets\\output\\data.whoiswho")) {
             file.write(ret.toString());
             System.out.println("Successfully Copied JSON Object to File...");
             System.out.println("\nJSON Object: " + ret);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     public static String toTitleCase(String givenString) {
