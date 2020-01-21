@@ -8,7 +8,7 @@ It has been tested to run on Linux (Ubuntu 18.04) and Windows 10.
 
 ## Installation
 
-1. You need to have Java 8 or higher installed on you PC.
+1. You need to have Java 8 or higher installed on your PC.
 2. Download the file: [deck_generator.jar](https://github.com/Tantan4321/deck_generator/tree/master/out/artifacts/deck_generator_jar)
 to any directory on your PC.  
 3. Open a command line window in the directory you put the file.
