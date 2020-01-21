@@ -24,3 +24,4 @@ wikipedia to build the deck.
 When the application completes there will be a **actors_actressess.zip** file containing the deck in the
 same directory.
 
+***NOTE***: A generated actors_actressess.zip file is included in the root directory of this repo as generating the deck takes ~10 mins.
