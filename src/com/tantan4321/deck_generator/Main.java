@@ -67,7 +67,7 @@ public class Main {
 
     private static int scrapePeople(JSONObject theDeckJson, String deckName, String siteUrl, String pageUrl, int maxPages, int maxPeople) throws IOException {
         int totalScraped = 0;
-        while (pageUrl != null && !pageUrl.isBlank()) {
+        while (pageUrl != null && !pageUrl.isEmpty()) {
             System.out.println("Send Http GET request: [" + siteUrl + pageUrl + "]");
             String targetId1 = "#mw-pages";
 
